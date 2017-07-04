@@ -6,9 +6,14 @@ body{
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin: 0;
 }
 h1 {
   font-weight: normal;
+  padding: 20px;
+}
+p {
+  padding: 0 20px;
 }
 #hidden-message {
   display: none;
@@ -19,9 +24,9 @@ h1 {
   background: #F8FAFF;
   border: 1px solid #2f2f2f;
   border-radius: 5%;
-  margin: 5%;
+  margin: 2%;
   padding: 2%;
-  z-index: 10000;
+  z-index: 100;
 }
 #close-hidden-message {
   transform: rotate(45deg);
@@ -34,13 +39,62 @@ h1 {
 }
 #race-track {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 500px;
+  background-color: #282B2A;
+  float: right;
 }
-
+#grass {
+  width: calc(100% - 190px);
+  height: 70%;
+  background-color: #1fc71f;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+#short-cut-message {
+  display: none;
+  color: black;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  background-color: white;
+  padding: 5px;
+}
+#short-cut-message-2 {
+  display: none;
+  color: black;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  background-color: white;
+  padding: 5px;
+}
+#grass-2 {
+  position: relative;
+  background-color: #1fc71f;
+  width: 100%;
+  height: 200px;
+  float: left;
+}
+#pre-race-track {
+  position: relative;
+  width: 10%;
+  height: 125px;
+  background-color: #282B2A;
+  float: left;
+}
+#grass-0 {
+  background-color: #1fc71f;
+  width: 10%;
+  height: 435px;
+  float: left;
+  top: 280px;
+  position: absolute;
+}
 #finish-line {
   width: 200px;
-  height: 100px;
+  height: 30%;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -66,13 +120,15 @@ h1 {
     width: 125px;
     height: 45px;
     position: absolute;
-    left:7%;
+    left:4%;
     top:10%;
     animation:entrance 2s 1;
     animation-direction:normal;
     -webkit-animation:entrance 2s 1;
     -webkit-animation-direction:normal;
-  z-index: 1000;
+    z-index: 10;
+    /*box-shadow: -16px -1px 20px -5px rgba(255,255,255,0.2);
+    border-radius: 98%;*/
 }
 #car-motor{
       transform: scale(0.25);
@@ -88,12 +144,12 @@ h1 {
     @keyframes entrance
     {
     0%   {  left:-50%; top:10%;}
-    100%  {left:7%; top:10%;}
+    100%  {left:4%; top:10%;}
     }
     @-webkit-keyframes entrance 
     {
     0%   {  left:-50%; top:10%;}
-    100%  {left:7%; top:10%;}
+    100%  {left:4%; top:10%;}
 
     }
     #nose{
