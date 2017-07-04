@@ -5,6 +5,7 @@ var shortcutMessage = document.querySelector("#short-cut-message");
 var grass2 = document.querySelector("#grass-2");
 var shortcutMessage2 = document.querySelector("#short-cut-message-2");
 var hiddenMessage = document.querySelector("#hidden-message");
+var overlay = document.querySelector("#overlay");
 var closeHiddenMessageButton = document.querySelector("#close-hidden-message");
 var movementLength= 10;
 var position = {
@@ -57,6 +58,7 @@ function checkIfWonRace() {
 	if (carPosition.bottom > finishPosition.top && carPosition.top < finishPosition.bottom && carPosition.right > finishPosition.left) {
 		if (!showedHiddenMessage) {
 			hiddenMessage.style.display = 'block';
+			overlay.style.display = 'block';
 			showedHiddenMessage = true;
 		}
 	} else {
@@ -104,6 +106,7 @@ function moveDown() {
 
 function closeHiddenMessage() {
 	hiddenMessage.style.display = 'none';
+	overlay.style.display = 'none';
 }
 
 function onKeydown(e) {

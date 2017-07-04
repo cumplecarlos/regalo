@@ -21,16 +21,47 @@ p {
 }
 #hidden-message {
   display: none;
-  width: 86%;
-  height: 86%;
+  width: 50%;
+  height: 80%;
   top: 0;
   position: absolute;
   background: #F8FAFF;
   border: 1px solid #2f2f2f;
   border-radius: 5%;
-  margin: 2%;
+  margin: 2% 25%;
   padding: 2%;
   z-index: 100;
+  overflow: auto;
+}
+#hidden-message h1 {
+  font-size: 25px;
+  font-weight: 600px;
+  padding: 0;
+}
+#hidden-message h2 {
+  font-weight: normal;
+}
+#hidden-message img {
+  position: relative;
+  width: auto;
+  max-height: 400px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 5px 5px 20px black;
+}
+#hidden-message .last-text {
+  text-align: right;
+  padding-right: 100px;
+}
+#overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 #close-hidden-message {
   transform: rotate(45deg);
